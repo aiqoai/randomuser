@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:user/model/planets.dart';
 import 'package:user/ui/text_style.dart';
+import 'package:user/ui/detail/myDetail.dart';
 
 class PlanetRow extends StatelessWidget{
 
@@ -142,7 +143,12 @@ class PlanetRow extends StatelessWidget{
       ),
     );
 
-    return Container(
+    return GestureDetector(
+      onTap: ()=> Navigator.of(context).push(
+        PageRouteBuilder(pageBuilder: (_,__,___)=>MyDetail(this.planet),
+        )
+      ),
+      child: Container(
         height:130.0,
         margin: 
         EdgeInsets.symmetric(vertical: 15.0,
@@ -163,7 +169,14 @@ class PlanetRow extends StatelessWidget{
 
         ])
 
+    ),
+
+
     );
+    
+    
+    
+    
   }
 }
 

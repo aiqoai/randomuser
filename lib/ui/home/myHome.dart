@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:user/ui/home/myGradientAppBar.dart';
 import 'package:user/ui/home/myHomepagebody.dart';
+import 'package:user/ui/detail/myDetail.dart';
 class MyPlanetApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
@@ -15,7 +16,11 @@ class MyPlanetApp extends StatelessWidget{
                   accentColor: Colors.orange
 
                 ),
-                home:HomePage()
+                 home:HomePage(),
+                routes: <String,WidgetBuilder>{
+                  // 'detail':(_)=>MyDetail(),
+                  'root':(_)=>HomePage()
+                },
               );
 
   }
