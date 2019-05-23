@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:user/model/planets.dart';
 import 'package:user/ui/common/separator.dart';
-import 'package:user/ui/detail/detail_page.dart';
+// import 'package:user/ui/detail/detail_page.dart';
+import 'package:user/ui/home/myPlanetRow.dart';
 import 'package:user/ui/text_style.dart';
 
 class PlanetSummary extends StatelessWidget {
@@ -110,7 +111,7 @@ class PlanetSummary extends StatelessWidget {
       onTap: horizontal
           ? () => Navigator.of(context).push(
             new PageRouteBuilder(
-              pageBuilder: (_, __, ___) => new DetailPage(planet),
+              pageBuilder: (_, __, ___) =>  PlanetRow(this.planet),
               transitionsBuilder: (context, animation, secondaryAnimation, child) =>
                 new FadeTransition(opacity: animation, child: child),
               ) ,
