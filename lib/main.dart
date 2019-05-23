@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:user/ui/user_widget.dart';
-import 'package:user/ui/myhome.dart';
+import 'package:user/ui/home/myHome.dart';
 void main() => runApp(MyPlanetApp());
 // void main() => runApp(MyApp());
 
