@@ -3,8 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:user/ui/user_widget.dart';
-
-void main() => runApp(MyApp());
+import 'package:user/ui/myhome.dart';
+void main() => runApp(MyPlanetApp());
+// void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -24,6 +25,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
+
+
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
 
@@ -36,18 +42,20 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      child: UserWidget(),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          stops: [0.0, 0.7],
-          colors: [
-            Color(0xFFF12711),
-            Color(0xFFf5af19),
-          ],
+      
+        child: UserWidget(),
+
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.0, 0.7],
+            colors: [
+              Color(0xFFF12711),
+              Color(0xFFf5af19),
+            ],
+          ),
         ),
-      ),
     ));
   }
 }
