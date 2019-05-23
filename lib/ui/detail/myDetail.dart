@@ -24,14 +24,22 @@ class MyDetail extends StatelessWidget{
       body:  Container(
         constraints:  BoxConstraints.expand(),
         color:  Color(0xFF736AB7),
-        child:  Stack (
+        child:  
+        // RaisedButton(onPressed: ()=>{
+        //   Navigator.pop(context),
+        // },child: Text(" go back"),)
+        
+        Stack (
           children: <Widget>[
-            // _getBackground(),
-            // _getGradient(),
-            _getContent(),
+             _getBackground(),
+             _getGradient(),
+            _getContent(context),
              _getToolbar(context),
           ],
         ),
+
+
+
       ),
     );
   }
@@ -64,7 +72,7 @@ class MyDetail extends StatelessWidget{
           );
   }
 
-  Container _getContent() {
+  Container _getContent(context) {
     final _overviewTitle = "Overview".toUpperCase();
     return  Container(
             child:  ListView(
@@ -83,6 +91,14 @@ class MyDetail extends StatelessWidget{
                        Separator(),
                        Text(
                           planet.description, style: Style.commonTextStyle),
+                    
+                    
+                      Container(height: 100,),
+                      MaterialButton(onPressed: ()=>{
+                                     Navigator.pop(context),
+                                   },child: Text(" go back"),color: Colors.white,)
+           
+                    
                     ],
                   ),
                 ),
@@ -98,7 +114,12 @@ class MyDetail extends StatelessWidget{
                     .of(context)
                     .padding
                     .top),
-            child:  BackButton(color: Colors.white),
+            child:  
+            // MaterialButton(onPressed: ()=>{
+            //                         Navigator.pop(context),
+            //                       },child: Text(" go back"),color: Colors.white,)
+            
+            BackButton(color: Colors.white), 
           );
   }
 
