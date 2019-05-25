@@ -23,3 +23,4 @@ https://sergiandreplace.com/planets-flutter-routing-and-navigation/
 
 * Lesson 6: Planets-Flutter: planet detail page
 
+https://sergiandreplace.com/planets-flutter-planet-detail-page/
